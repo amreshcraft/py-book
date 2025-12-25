@@ -1,0 +1,78 @@
+% Geometry & Page Setup
+\usepackage[a4paper,margin=1in]{geometry}
+
+% Fonts & Math
+\usepackage{amsmath,amssymb}
+
+% Images
+\usepackage{graphicx}
+\usepackage{float}
+
+% Code Listings
+\usepackage{listings}
+\usepackage{xcolor}
+\renewcommand{\lstlistingname}{Listing}
+\renewcommand{\lstlistlistingname}{List of Listings}
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{teal},
+    commentstyle=\color{gray},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    frame=single,
+    breaklines=true,
+    tabsize=4,
+    showstringspaces=false,
+    captionpos=b
+}
+
+% Hyperlinks
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=green,urlcolor=cyan]{hyperref}
+
+
+\usepackage{fancyhdr}
+
+% MAIN CHAPTER STYLE
+\fancyhf{}  % clear all
+\fancyhead[LE,RO]{\thepage}                  % page number left (even) / right (odd)
+\fancyhead[RE]{\nouppercase{\leftmark}}      % chapter name on even pages
+\fancyhead[LO]{\nouppercase{\rightmark}}     % section name on odd pages
+ \fancyfoot[C]{%
+  \makebox[\textwidth]{%
+    \hrulefill\quad[\thepage]\quad\hrulefill
+  }%
+}                  % footer center brackets
+\renewcommand{\headrulewidth}{0.4pt}         % thin header line
+% \renewcommand{\footrulewidth}{0.2pt}         % thin footer line
+
+\pagestyle{fancy}  % apply to main chapters
+
+% REDIFINE plain style for chapter first pages
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyhead[LE,RO]{\thepage}
+    \fancyhead[RE]{\nouppercase{\leftmark}}
+    \fancyhead[LO]{\nouppercase{\rightmark}}
+    \fancyfoot[C]{%
+  \makebox[\textwidth]{%
+    \hrulefill\quad[\thepage]\quad\hrulefill
+  }%
+}
+
+    % \fancyfoot[RE]{\nouppercase{\leftmark}}
+    % \fancyfoot[LO]{\nouppercase{\rightmark}}
+    \renewcommand{\headrulewidth}{0.4pt}
+    % \renewcommand{\footrulewidth}{0.2pt}
+}
+
+
+% font 
+% ===== FONTS (pdflatex SAFE) =====
+% \usepackage[T1]{fontenc}
+% \usepackage{libertinus}    % serif + sans
+% \usepackage{inconsolata}  % monospace (code)
+
+ 
