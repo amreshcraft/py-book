@@ -1,18 +1,32 @@
-% Geometry & Page Setup
+% =========================================================
+% DOCUMENT SETUP (Polished & Clean)
+% =========================================================
+
+% -------------------------
+% Page Geometry
+% -------------------------
 \usepackage[a4paper,margin=1in]{geometry}
 
+% -------------------------
 % Fonts & Math
+% -------------------------
 \usepackage{amsmath,amssymb}
 
-% Images
+% -------------------------
+% Images & Floats
+% -------------------------
 \usepackage{graphicx}
 \usepackage{float}
 
-% Code Listings
+% -------------------------
+% Code Listings (Python)
+% -------------------------
 \usepackage{listings}
 \usepackage{xcolor}
+
 \renewcommand{\lstlistingname}{Listing}
 \renewcommand{\lstlistlistingname}{List of Listings}
+
 \lstdefinestyle{pythonstyle}{
     language=Python,
     basicstyle=\ttfamily\small,
@@ -29,50 +43,65 @@
     captionpos=b
 }
 
+% -------------------------
 % Hyperlinks
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=green,urlcolor=cyan]{hyperref}
+% -------------------------
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=green,
+    urlcolor=cyan
+]{hyperref}
 
-
+% -------------------------
+% Header & Footer Styling
+% -------------------------
 \usepackage{fancyhdr}
+\pagestyle{fancy}
 
-% MAIN CHAPTER STYLE
-\fancyhf{}  % clear all
-\fancyhead[LE,RO]{\thepage}                  % page number left (even) / right (odd)
-\fancyhead[RE]{\nouppercase{\leftmark}}      % chapter name on even pages
-\fancyhead[LO]{\nouppercase{\rightmark}}     % section name on odd pages
- \fancyfoot[C]{%
+% Clear default settings
+\fancyhf{}
+
+% Header
+\fancyhead[LE,RO]{\thepage}                 % Page number
+\fancyhead[RE]{\nouppercase{\leftmark}}     % Chapter name (even pages)
+\fancyhead[LO]{\nouppercase{\rightmark}}    % Section name (odd pages)
+
+% Footer
+\fancyfoot[C]{%
   \makebox[\textwidth]{%
     \hrulefill\quad[\thepage]\quad\hrulefill
   }%
-}                  % footer center brackets
-\renewcommand{\headrulewidth}{0.4pt}         % thin header line
-% \renewcommand{\footrulewidth}{0.2pt}         % thin footer line
+}
 
-\pagestyle{fancy}  % apply to main chapters
+% Header rule
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% REDIFINE plain style for chapter first pages
-\fancypagestyle{plain}{%
+% -------------------------
+% Plain Page Style (Chapter First Page)
+% -------------------------
+\fancypagestyle{plain}{
     \fancyhf{}
     \fancyhead[LE,RO]{\thepage}
     \fancyhead[RE]{\nouppercase{\leftmark}}
     \fancyhead[LO]{\nouppercase{\rightmark}}
     \fancyfoot[C]{%
-  \makebox[\textwidth]{%
-    \hrulefill\quad[\thepage]\quad\hrulefill
-  }%
-}
-
-    % \fancyfoot[RE]{\nouppercase{\leftmark}}
-    % \fancyfoot[LO]{\nouppercase{\rightmark}}
+      \makebox[\textwidth]{%
+        \hrulefill\quad[\thepage]\quad\hrulefill
+      }%
+    }
     \renewcommand{\headrulewidth}{0.4pt}
-    % \renewcommand{\footrulewidth}{0.2pt}
 }
 
-
-% font 
-% ===== FONTS (pdflatex SAFE) =====
+% -------------------------
+% Fonts (pdfLaTeX Safe)
+% -------------------------
+% Uncomment if needed
 % \usepackage[T1]{fontenc}
-% \usepackage{libertinus}    % serif + sans
-% \usepackage{inconsolata}  % monospace (code)
+% \usepackage{libertinus}     % Serif + Sans
+% \usepackage{inconsolata}    % Monospace for code
 
- 
+% =========================================================
+% End of Polished Preamble
+% =========================================================

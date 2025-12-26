@@ -1,0 +1,50 @@
+\section{Variables in Python}
+
+A \textbf{variable} is a name used to store data in a program.
+In Python, a variable is created when you assign a value to it.
+
+\begin{itemize}
+  \item Variables store numbers, text, or other data.
+  \item Python does not need a data type while declaring a variable.
+  \item The data type is decided automatically.
+\end{itemize}
+
+\subsection*{Rules for Naming Variables}
+
+\begin{itemize}
+  \item A variable name must start with a \textbf{letter} or \textbf{underscore (\_)}.
+  \item It cannot start with a number.
+  \item It can contain letters, numbers, and underscores.
+  \item Spaces are not allowed.
+  \item Python keywords cannot be used as variable names.
+  \item Variable names are \textbf{case-sensitive}.
+\end{itemize}
+
+\subsection*{Correct Variable Examples}
+
+\begin{lstlisting}[style=pythonstyle,caption={Correct Variable Names}]
+age = 25
+_name = "Python"
+total_marks = 450
+price2 = 99.5
+is_active = True
+\end{lstlisting}
+
+\subsection*{Wrong Variable Examples}
+
+\begin{lstlisting}[style=pythonstyle,caption={Wrong Variable Names}]
+2age = 30        # Cannot start with number
+total marks = 50 # Space not allowed
+class = "A"      # 'class' is a Python keyword
+price$ = 100     # Special characters not allowed
+\end{lstlisting}
+
+\subsection*{Case Sensitivity Example}
+
+\begin{lstlisting}[style=pythonstyle,caption={Case Sensitivity in Variables}]
+value = 10
+Value = 20
+
+print(value)  # Output: 10
+print(Value)  # Output: 20
+\end{lstlisting}
