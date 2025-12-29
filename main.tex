@@ -1,29 +1,48 @@
-\documentclass[12pt]{book}
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{titlesec}
+
+\titlespacing*{\chapter}
+{0pt}        % left
+{-30pt}      % before
+{20pt}       % after
 
 
-\input{preamble}
-\input{metadata}
 
+
+\include{preamble/code-style} 
 
 \begin{document}
 
+% \include{preamble/header-footer}
+
+
+
 
 \frontmatter
-\include{frontmatter/titlepage}
-\include{frontmatter/preface}
+\include{./frontmatter/copyright.tex}
+\include{./frontmatter/dedication.tex}
+\include{./frontmatter/preface.tex}
+\include{./frontmatter/titlepage.tex}
+
+\maketitle
 \tableofcontents
 
-
 \mainmatter
-\include{chapters/basics/ch01-introduction}
-\include{chapters/basics/ch01.2-types-of-code}
-\include{chapters/basics/ch01.3-vm-pvm}
-\include{chapters/basics/ch01.4-idle}
-\include{chapters/basics/ch01.5-keywords}
-\include{chapters/basics/ch01.6-variable}
-\backmatter
-\include{backmatter/appendix}
-\include{backmatter/bibliography}
+\include{./TeX_files/Ch-1-Definitions.tex}
+\include{./TeX_files/Ch-2-Types-Of-Codes.tex}
+\include{./TeX_files/Ch-3-Virtual-Machine-And-PVM.tex}
+\include{./TeX_files/Ch-4-IDLE-in-Python.tex}
+\include{./TeX_files/Ch-5-Python-Keywords.tex}
+\include{./TeX_files/Ch-6-Variables-in-Python.tex}
 
+\backmatter
+\include{./backmatter/appendix.tex}
+\include{./backmatter/bibliography.tex}
 
 \end{document}

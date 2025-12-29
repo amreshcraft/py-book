@@ -2,4 +2,32 @@
 \addcontentsline{toc}{chapter}{Appendix}
 
 \section{Python Installation}
-Instructions to install Python on Windows, Linux, Mac...
+
+This section provides instructions to install Python on **Windows, Linux, and macOS**.
+
+\subsection*{Windows}
+1. Visit the official Python website: \url{https://www.python.org/downloads/}.
+2. Download the latest stable release executable installer (e.g., \texttt{python-3.x.x-amd64.exe}).
+3. Run the installer and make sure to **check the box "Add Python to PATH"**.
+4. Verify installation in Command Prompt:
+\begin{lstlisting}[language=bash]
+python --version
+\end{lstlisting}
+
+\subsection*{Linux (Ubuntu/Debian)}
+Open a terminal and run:
+\begin{lstlisting}[language=bash]
+sudo apt update
+sudo apt install python3 python3-pip
+python3 --version
+\end{lstlisting}
+
+\subsection*{macOS}
+1. macOS may have Python pre-installed, but it is recommended to install the latest version via [Homebrew](https://brew.sh/):
+\begin{lstlisting}[language=bash]
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install python
+python3 --version
+\end{lstlisting}
+
+

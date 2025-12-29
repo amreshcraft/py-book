@@ -1,2 +1,69 @@
-/output
-output
+# ==========================
+# LaTeX core auxiliary files
+# ==========================
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.idx
+*.ind
+*.ilg
+
+# ==========================
+# LaTeX temporary files
+# ==========================
+*.nav
+*.snm
+*.vrb
+*.thm
+*.cut
+*.dvi
+*.ps
+*.xdv
+
+# ==========================
+# Build folders (optional)
+# ==========================
+build/
+out/
+
+# ==========================
+# Editor-specific files
+# ==========================
+# TeXstudio
+*.txss
+*.txsaux
+*.synctex
+
+# VS Code
+.vscode/
+
+# ==========================
+# OS-specific files
+# ==========================
+# Linux
+*~
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# ==========================
+# PDF output (optional)
+# ==========================
+# Uncomment if you DON'T want PDFs in git
+# *.pdf

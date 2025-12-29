@@ -1,0 +1,21 @@
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+
+% Header
+\fancyhead[LE]{\small\itshape\leftmark} % left header on even pages: chapter
+\fancyhead[RO]{\small\itshape\rightmark} % right header on odd pages: section
+
+% Footer: page number in [page] centered
+\fancyfoot[C]{\makebox[\textwidth]{\hrulefill\quad[\thepage]\quad\hrulefill}}
+
+% Optional: rules
+\renewcommand{\headrulewidth}{0.4pt} % header line thickness
+\renewcommand{\footrulewidth}{0pt}   % no footer line
+
+% For chapter starting pages (plain style)
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\makebox[\textwidth]{\hrulefill\quad[\thepage]\quad\hrulefill}}
+  \renewcommand{\headrulewidth}{0pt}
+}
